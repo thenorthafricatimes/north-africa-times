@@ -1,0 +1,19 @@
+# North Africa Times - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core Dependencies
+requests==2.31.0
+psycopg2-binary==2.9.9
+schedule==1.2.0
+
+# API Integrations
+anthropic==0.7.0
+
+# Data Processing
+python-dotenv==1.0.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3

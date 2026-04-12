@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Africa Times - Intelligence Platform for Algeria, Morocco, Egypt, Tunisia, Libya & Mauritania</title>
+    <meta name="description" content="Comprehensive news and intelligence covering North Africa: Algeria, Morocco, Egypt, Tunisia, Libya, and Mauritania. 35,000+ sources in 100+ languages.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="date-time">
+                <span class="live-indicator">
+                    <span class="live-dot"></span>
+                    LIVE
+                </span>
+                <span id="currentDate"></span>
+            </div>
+            <div class="top-links">
+                <a href="#about">About</a>
+                <a href="#countries">Countries</a>
+                <a href="#subscribe">Subscribe</a>
+                <a href="#intelligence">Intelligence Hub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="logo">
+                <div class="logo-title">North Africa Times</div>
+                <div class="logo-subtitle">Intelligence Platform • 6 Countries • 230M+ People</div>
+            </div>
+	<!-- LANGUAGE SELECTOR -->
+	<div class="language-selector">
+		<button class="lang-btn" data-lang="ar" title="العربية">🇦🇷 AR</button>
+		<button class="lang-btn active" data-lang="en" title="English">🇬🇧 EN</button>
+		<button class="lang-btn" data-lang="es" title="Español">🇪🇸 ES</button>
+		<button class="lang-btn" data-lang="fr" title="Français">🇫🇷 FR</button>
+		<button class="lang-btn" data-lang="it" title="Italiano">🇮🇹 IT</button>
+
+			</div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search across all countries..." id="searchInput">
+                </div>
+                <button class="subscribe-btn" onclick="window.location.href='#pricing'">Subscribe</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Country Selector -->
+    <nav class="country-nav">
+        <div class="country-nav-content">
+            <ul class="country-menu">
+                <li class="active"><a href="index.html">🌍 All Countries</a></li>
+                <li><a href="algeria.html">🇩🇿 Algeria</a></li>
+                <li><a href="morocco.html">🇲🇦 Morocco</a></li>
+                <li><a href="egypt.html">🇪🇬 Egypt</a></li>
+                <li><a href="tunisia.html">🇹🇳 Tunisia</a></li>
+                <li><a href="libya.html">🇱🇾 Libya</a></li>
+                <li><a href="mauritania.html">🇲🇷 Mauritania</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Category Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <ul class="nav-menu">
+                <li class="active"><a href="#all">Latest</a></li>
+                <li><a href="#politics">Politics</a></li>
+                <li><a href="#economy">Economy</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#energy">Energy</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#regional">Regional Relations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breaking News -->
+    <div class="breaking-news">
+        <div class="breaking-content">
+            <span class="breaking-label">Breaking News</span>
+            <span class="breaking-text" id="breakingNews">Loading latest breaking news from across North Africa...</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        
+        <!-- Regional Overview -->
+        <section class="regional-overview">
+            <h2 class="section-title">North Africa at a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-card" data-country="algeria">
+                    <div class="stat-flag">🇩🇿</div>
+                    <h3>Algeria</h3>
+                    <div class="stat-number" id="algeria-count">0</div>
+                    <p>Articles Today</p>
+                </div>
+                <div class="stat-card" data-country="morocco">
+                    <div class="stat-flag">🇲🇦</div>
+                    <h3>Morocco</h3>
+                    <div class="stat-number" id="morocco-count">0</div>
+                    <p>Articles Today</p>
+                </div>
+                <div class="stat-card" data-country="egypt">
+                    <div class="stat-flag">🇪🇬</div>
+                    <h3>Egypt</h3>
+                    <div class="stat-number" id="egypt-count">0</div>
+                    <p>Articles Today</p>
+                </div>
+                <div class="stat-card" data-country="tunisia">
+                    <div class="stat-flag">🇹🇳</div>
+                    <h3>Tunisia</h3>
+                    <div class="stat-number" id="tunisia-count">0</div>
+                    <p>Articles Today</p>
+                </div>
+                <div class="stat-card" data-country="libya">
+                    <div class="stat-flag">🇱🇾</div>
+                    <h3>Libya</h3>
+                    <div class="stat-number" id="libya-count">0</div>
+                    <p>Articles Today</p>
+                </div>
+                <div class="stat-card" data-country="mauritania">
+                    <div class="stat-flag">🇲🇷</div>
+                    <h3>Mauritania</h3>
+                    <div class="stat-number" id="mauritania-count">0</div>
+                    <p>Articles Today</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="heroSection">
+            <div class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Loading top stories from 35,000+ sources worldwide...</p>
+            </div>
+        </section>
+
+        <!-- Content with Sidebar -->
+        <div class="content-with-sidebar">
+            <div class="main-content">
+                <!-- Latest News Grid -->
+                <div class="section-header">
+                    <h2 class="section-title">Latest from North Africa</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-country="all">All</button>
+                        <button class="filter-btn" data-country="algeria">Algeria</button>
+                        <button class="filter-btn" data-country="morocco">Morocco</button>
+                        <button class="filter-btn" data-country="egypt">Egypt</button>
+                        <button class="filter-btn" data-country="tunisia">Tunisia</button>
+                        <button class="filter-btn" data-country="libya">Libya</button>
+                        <button class="filter-btn" data-country="mauritania">Mauritania</button>
+                    </div>
+                </div>
+
+                <div class="article-grid" id="newsGrid">
+                    <div class="loading-indicator">
+                        <div class="spinner"></div>
+                        <p>Aggregating news from across the region...</p>
+                    </div>
+                </div>
+
+                <div id="loadMoreContainer" style="text-align: center; margin: 40px 0;">
+                    <button class="btn-load-more" onclick="loadMoreArticles()">
+                        Load More Articles
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Regional Trends -->
+                <div class="trending-box">
+                    <h3 class="trending-title">🔥 Trending Topics</h3>
+                    <div id="trendingTopics">
+                        <div class="loading-indicator-small">Loading trends...</div>
+                    </div>
+                </div>
+
+                <!-- Intelligence Brief -->
+                <div class="intelligence-box">
+                    <h3>📊 Intelligence Brief</h3>
+                    <p>Get daily analysis of North Africa's political, economic, and security landscape.</p>
+                    <button class="btn-premium" onclick="window.location.href='#pricing'">
+                        Unlock Premium
+                    </button>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="newsletter-box">
+                    <h3>📧 Daily Briefing</h3>
+                    <p>Top stories from across North Africa, delivered every morning.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email" id="newsletterEmail">
+                        <button onclick="subscribeNewsletter()">Subscribe</button>
+                    </div>
+                    <p class="newsletter-count">Join 50,000+ subscribers</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Regional Analysis Section -->
+        <section class="analysis-section">
+            <div class="section-header">
+                <h2 class="section-title">Regional Analysis</h2>
+                <a href="#" class="view-all">View All →</a>
+            </div>
+            <div class="analysis-grid" id="analysisGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="pricing-subtitle">Access the most comprehensive North Africa intelligence platform</p>
+            
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge">Free</div>
+                    <h3>Basic</h3>
+                    <div class="price">$0<span>/month</span></div>
+                    <ul class="features">
+                        <li>✓ Latest news articles</li>
+                        <li>✓ Breaking news alerts</li>
+                        <li>✓ 5 articles per month</li>
+                        <li>✓ Weekly newsletter</li>
+                        <li>✗ Daily intelligence brief</li>
+                        <li>✗ Archive access</li>
+                        <li>✗ API access</li>
+                    </ul>
+                    <button class="btn-plan">Get Started</button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card featured">
+                    <div class="plan-badge popular">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">$10<span>/month</span></div>
+                    <ul class="features">
+                        <li>✓ Unlimited articles</li>
+                        <li>✓ Daily intelligence brief</li>
+                        <li>✓ Full archive access</li>
+                        <li>✓ Ad-free experience</li>
+                        <li>✓ Email & mobile alerts</li>
+                        <li>✓ Saved articles</li>
+                        <li>✗ API access</li>
+                    </ul>
+                    <button class="btn-plan primary">Start Free Trial</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge">Professional</div>
+                    <h3>Pro</h3>
+                    <div class="price">$50<span>/month</span></div>
+                    <ul class="features">
+                        <li>✓ Everything in Premium</li>
+                        <li>✓ Real-time intelligence</li>
+                        <li>✓ Custom reports</li>
+                        <li>✓ Sentiment analysis</li>
+                        <li>✓ API access (5,000 calls/mo)</li>
+                        <li>✓ Export to PDF/Excel</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <button class="btn-plan">Start Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge">Enterprise</div>
+                    <h3>Business</h3>
+                    <div class="price">Custom</div>
+                    <ul class="features">
+                        <li>✓ Everything in Pro</li>
+                        <li>✓ Unlimited API access</li>
+                        <li>✓ Dedicated analyst</li>
+                        <li>✓ Custom integration</li>
+                        <li>✓ White-label option</li>
+                        <li>✓ Team accounts</li>
+                        <li>✓ SLA guarantee</li>
+                    </ul>
+                    <button class="btn-plan">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>North Africa Times</h3>
+                    <p>The most comprehensive intelligence platform covering Algeria, Morocco, Egypt, Tunisia, Libya, and Mauritania. Monitoring 35,000+ sources in 100+ languages.</p>
+                    <div class="footer-stats">
+                        <div class="footer-stat">
+                            <strong>230M+</strong>
+                            <span>People Covered</span>
+                        </div>
+                        <div class="footer-stat">
+                            <strong>35,000+</strong>
+                            <span>Sources</span>
+                        </div>
+                        <div class="footer-stat">
+                            <strong>100+</strong>
+                            <span>Languages</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Countries</h4>
+                    <ul>
+                        <li><a href="algeria.html">🇩🇿 Algeria</a></li>
+                        <li><a href="morocco.html">🇲🇦 Morocco</a></li>
+                        <li><a href="egypt.html">🇪🇬 Egypt</a></li>
+                        <li><a href="tunisia.html">🇹🇳 Tunisia</a></li>
+                        <li><a href="libya.html">🇱🇾 Libya</a></li>
+                        <li><a href="mauritania.html">🇲🇷 Mauritania</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Sections</h4>
+                    <ul>
+                        <li><a href="#politics">Politics</a></li>
+                        <li><a href="#economy">Economy</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#energy">Energy</a></li>
+                        <li><a href="#regional">Regional Relations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#api">API</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 North Africa Times. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#twitter">Twitter</a>
+                    <a href="#facebook">Facebook</a>
+                    <a href="#linkedin">LinkedIn</a>
+                    <a href="#youtube">YouTube</a>
+                    <a href="#tiktok">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
